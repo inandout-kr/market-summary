@@ -2,51 +2,73 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>시장 써머리 리포트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[2026.08.27] 전체 시장 마감 써머리</title>
+    <meta property="og:title" content="[2026.08.27] 전체 시장 마감 써머리">
+    <meta property="og:description" content="KOSPI200 512.34 (+0.83%) · 거래대금 합계 21.4조원">
+    <meta property="og:url" content="https://inandout-kr.github.io/market-summary/reports/20260827_all.html">
+    <meta property="og:type" content="article">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        @page {
-            size: A4;
-            margin: 12mm;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: #ffffff;
             color: #1f2937;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
             line-height: 1.6;
-            padding: 10px;
+            padding: 20px;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+        .layout { max-width: 1200px; margin: 0 auto; }
         header {
             text-align: center;
             padding: 20px 0 16px;
             border-bottom: 2px solid #111827;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
-        header h1 {
-            color: #111827;
-            font-size: 1.6rem;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
+        header h1 { color: #111827; font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+        header .timestamp { color: #6b7280; font-size: 0.9rem; }
+        header .timestamp a { color: #2563eb; text-decoration: none; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
         }
-        header .timestamp {
-            color: #6b7280;
-            font-size: 0.9rem;
+        .hero-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
         }
+        .hero-label { color: #6b7280; font-size: 0.82rem; margin-bottom: 4px; }
+        .hero-value { color: #111827; font-size: 1.4rem; font-weight: 700; }
+        .hero-pct { font-size: 0.95rem; font-weight: 600; }
+        .content-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+        .toc-mobile {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 18px;
+        }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #111827; }
+        .toc-mobile a, .toc-side a {
+            display: block;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.88rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .toc-mobile a:hover, .toc-side a:hover { color: #2563eb; }
+        .toc-side { display: none; }
         .summary-section {
             background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 20px 24px;
             margin-bottom: 18px;
-            page-break-inside: avoid;
+            scroll-margin-top: 16px;
         }
         .summary-section h2 {
             color: #111827;
@@ -62,10 +84,23 @@
             white-space: pre-line;
             word-break: break-word;
         }
-        .ai-content a {
-            color: #2563eb;
+        .ai-content a { color: #2563eb; text-decoration: none; word-break: break-all; }
+        .pair-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+        .fab {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #111827;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
             text-decoration: none;
-            word-break: break-all;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         }
         footer {
             text-align: center;
@@ -75,59 +110,122 @@
             border-top: 1px solid #e5e7eb;
             margin-top: 8px;
         }
+        @media (min-width: 1000px) {
+            .content-grid { grid-template-columns: minmax(0, 1fr) 240px; }
+            .toc-mobile { display: none; }
+            .toc-side {
+                display: block;
+            }
+            .toc-side .toc-inner {
+                position: sticky;
+                top: 20px;
+                background: #f9fafb;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                padding: 14px 16px;
+            }
+            .toc-side .toc-title { font-weight: 600; color: #111827; margin-bottom: 8px; font-size: 0.9rem; }
+            .pair-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="layout">
         <header>
             <h1>📊 [2026.08.27] Daily Market Brief</h1>
-            <div class="timestamp">시장: ALL &middot; 2026-08-31 13:23 생성</div>
+            <div class="timestamp">시장: ALL &middot; 2026-08-31 14:18 생성 &middot; <a href="../index.html">아카이브</a></div>
         </header>
 
-        <div class="summary-section">
-            <h2>1️⃣ 지수 현황</h2>
-            <div class="ai-content">- KOSPI200 종가 512.34 (+4.21, <span style="color:#16a34a;font-weight:600">+0.83%</span>), 거래대금 8.2조원
+        <div class="hero-grid">
+            <div class="hero-card">
+                <div class="hero-label">KOSPI200</div>
+                <div class="hero-value">512.34</div>
+                <div class="hero-pct" style="color:#16a34a">+0.83%</div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-label">거래대금 합계</div>
+                <div class="hero-value">21.4조원</div>
+                <div class="hero-pct" style="color:#6b7280">오늘</div>
+            </div>
+        </div>
+
+        <details class="toc-mobile">
+            <summary>목차</summary>
+            <div style="margin-top:8px">
+                <a href="#sec-0">1️⃣ 지수 현황</a>
+                <a href="#sec-1">🏛️ 시장별 거래대금 (오늘)</a>
+                <a href="#sec-2">📅 최근 5일 거래대금</a>
+                <a href="#sec-3">2️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-4">3️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-5">8️⃣ 마켓 코멘트</a>
+                <a href="#comments">💬 댓글</a>
+            </div>
+        </details>
+
+        <div class="content-grid">
+            <main>
+            <div class="summary-section" id="sec-0">
+                <h2>1️⃣ 지수 현황</h2>
+                <div class="ai-content">- KOSPI200 종가 512.34 (+4.21, <span style="color:#16a34a;font-weight:600">+0.83%</span>), 거래대금 8.2조원
 - 외국인 순매수 +3,120억원, 기관 순매도 -850억원
 - 대형주 주도 강세</div>
-        </div>
-        <div class="summary-section">
-            <h2>🏛️ 시장별 거래대금 (오늘)</h2>
-            <div class="ai-content">- 코스피: 12.4조원 (58%)
+            </div>
+            <div class="summary-section" id="sec-1">
+                <h2>🏛️ 시장별 거래대금 (오늘)</h2>
+                <div class="ai-content">- 코스피: 12.4조원 (58%)
 - 코스닥: 9.0조원 (42%)
 - 합계: 21.4조원</div>
-        </div>
-        <div class="summary-section">
-            <h2>📅 최근 5일 거래대금</h2>
-            <div class="ai-content">- 08/21: 코스피 11.2조원 / 코스닥 8.5조원 / 합계 19.7조원
+            </div>
+            <div class="summary-section" id="sec-2">
+                <h2>📅 최근 5일 거래대금</h2>
+                <div class="ai-content">- 08/21: 코스피 11.2조원 / 코스닥 8.5조원 / 합계 19.7조원
 - 08/27: 코스피 12.4조원 / 코스닥 9.0조원 / 합계 21.4조원 ◀️ 오늘
 - 거래대금 증가 추세</div>
-        </div>
-        <div class="summary-section">
-            <h2>2️⃣ 주요 상승 종목 (Top 10)</h2>
-            <div class="ai-content">삼성전자 | <span style="color:#16a34a;font-weight:600">+3.21%</span> | 92,400원
+            </div>
+            <div class="pair-grid">
+            <div class="summary-section" id="sec-3">
+                <h2>2️⃣ 주요 상승 종목 (Top 10)</h2>
+                <div class="ai-content">삼성전자 | <span style="color:#16a34a;font-weight:600">+3.21%</span> | 92,400원
 - 외국인 대량 순매수 (뉴스: <a href="https://news.naver.com/example1">https://news.naver.com/example1</a>)
 
 SK하이닉스 | <span style="color:#16a34a;font-weight:600">+2.85%</span> | 312,000원
 - HBM4 공급 계약 공시</div>
-        </div>
-        <div class="summary-section">
-            <h2>3️⃣ 주요 하락 종목 (Worst 10)</h2>
-            <div class="ai-content">어떤제약 | <span style="color:#dc2626;font-weight:600">-8.42%</span> | 12,340원
+            </div>
+            <div class="summary-section" id="sec-4">
+                <h2>3️⃣ 주요 하락 종목 (Worst 10)</h2>
+                <div class="ai-content">어떤제약 | <span style="color:#dc2626;font-weight:600">-8.42%</span> | 12,340원
 - 임상 3상 실패 공시</div>
-        </div>
-        <div class="summary-section">
-            <h2>8️⃣ 마켓 코멘트</h2>
-            <div class="ai-content">- 반도체 중심 대형주 강세로 지수 상승
+            </div>
+            </div>
+            <div class="summary-section" id="sec-5">
+                <h2>8️⃣ 마켓 코멘트</h2>
+                <div class="ai-content">- 반도체 중심 대형주 강세로 지수 상승
 - 내일 미 FOMC 의사록 공개 주목</div>
+            </div>
+
+        <div class="summary-section" id="comments">
+            <h2>💬 댓글</h2>
+            <div class="ai-content">댓글 기능 준비 중입니다.</div>
+        </div>
+            </main>
+            <aside class="toc-side">
+                <div class="toc-inner">
+                    <div class="toc-title">목차</div>
+                    <a href="#sec-0">1️⃣ 지수 현황</a>
+                <a href="#sec-1">🏛️ 시장별 거래대금 (오늘)</a>
+                <a href="#sec-2">📅 최근 5일 거래대금</a>
+                <a href="#sec-3">2️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-4">3️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-5">8️⃣ 마켓 코멘트</a>
+                <a href="#comments">💬 댓글</a>
+                </div>
+            </aside>
         </div>
 
-        <div class="summary-section">
-            <h2>💬 댓글</h2>
-            <div class="ai-content">댓글 기능 준비 중입니다. (Cusdis App ID 미설정)</div>
-        </div>
+        <a class="fab" href="#comments" aria-label="댓글로 이동">💬</a>
 
         <footer>
-            시장 마감 써머리 봇 &middot; 생성: 2026-08-31 13:23
+            시장 마감 써머리 봇 &middot; 생성: 2026-08-31 14:18
         </footer>
     </div>
 </body>
