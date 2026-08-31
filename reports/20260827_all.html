@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시장 써머리 리포트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+        body {
+            background: #ffffff;
+            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0 16px;
+            border-bottom: 2px solid #111827;
+            margin-bottom: 24px;
+        }
+        header h1 {
+            color: #111827;
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        header .timestamp {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .summary-section {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }
+        .summary-section h2 {
+            color: #111827;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d1d5db;
+        }
+        .ai-content {
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.8;
+            white-space: pre-line;
+            word-break: break-word;
+        }
+        .ai-content a {
+            color: #2563eb;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        footer {
+            text-align: center;
+            padding: 16px 0;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 [2026.08.27] Daily Market Brief</h1>
+            <div class="timestamp">시장: ALL &middot; 2026-08-31 13:23 생성</div>
+        </header>
+
+        <div class="summary-section">
+            <h2>1️⃣ 지수 현황</h2>
+            <div class="ai-content">- KOSPI200 종가 512.34 (+4.21, <span style="color:#16a34a;font-weight:600">+0.83%</span>), 거래대금 8.2조원
+- 외국인 순매수 +3,120억원, 기관 순매도 -850억원
+- 대형주 주도 강세</div>
+        </div>
+        <div class="summary-section">
+            <h2>🏛️ 시장별 거래대금 (오늘)</h2>
+            <div class="ai-content">- 코스피: 12.4조원 (58%)
+- 코스닥: 9.0조원 (42%)
+- 합계: 21.4조원</div>
+        </div>
+        <div class="summary-section">
+            <h2>📅 최근 5일 거래대금</h2>
+            <div class="ai-content">- 08/21: 코스피 11.2조원 / 코스닥 8.5조원 / 합계 19.7조원
+- 08/27: 코스피 12.4조원 / 코스닥 9.0조원 / 합계 21.4조원 ◀️ 오늘
+- 거래대금 증가 추세</div>
+        </div>
+        <div class="summary-section">
+            <h2>2️⃣ 주요 상승 종목 (Top 10)</h2>
+            <div class="ai-content">삼성전자 | <span style="color:#16a34a;font-weight:600">+3.21%</span> | 92,400원
+- 외국인 대량 순매수 (뉴스: <a href="https://news.naver.com/example1">https://news.naver.com/example1</a>)
+
+SK하이닉스 | <span style="color:#16a34a;font-weight:600">+2.85%</span> | 312,000원
+- HBM4 공급 계약 공시</div>
+        </div>
+        <div class="summary-section">
+            <h2>3️⃣ 주요 하락 종목 (Worst 10)</h2>
+            <div class="ai-content">어떤제약 | <span style="color:#dc2626;font-weight:600">-8.42%</span> | 12,340원
+- 임상 3상 실패 공시</div>
+        </div>
+        <div class="summary-section">
+            <h2>8️⃣ 마켓 코멘트</h2>
+            <div class="ai-content">- 반도체 중심 대형주 강세로 지수 상승
+- 내일 미 FOMC 의사록 공개 주목</div>
+        </div>
+
+        <div class="summary-section">
+            <h2>💬 댓글</h2>
+            <div class="ai-content">댓글 기능 준비 중입니다. (Cusdis App ID 미설정)</div>
+        </div>
+
+        <footer>
+            시장 마감 써머리 봇 &middot; 생성: 2026-08-31 13:23
+        </footer>
+    </div>
+</body>
+</html>
