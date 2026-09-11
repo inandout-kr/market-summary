@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[2026.09.11] 전체 시장 마감 써머리</title>
+    <meta property="og:title" content="[2026.09.11] 전체 시장 마감 써머리">
+    <meta property="og:description" content="거래대금 합계 25.7조원">
+    <meta property="og:url" content="https://inandout-kr.github.io/market-summary/reports/20260911_all.html">
+    <meta property="og:type" content="article">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #ffffff;
+            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .layout { max-width: 1200px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 20px 0 16px;
+            margin-bottom: 20px;
+        }
+        header h1 { color: #111827; font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+        header .timestamp { color: #6b7280; font-size: 0.9rem; }
+        header .timestamp a { color: #2563eb; text-decoration: none; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .hero-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .hero-label { color: #6b7280; font-size: 0.82rem; margin-bottom: 4px; }
+        .hero-value { color: #111827; font-size: 1.4rem; font-weight: 700; }
+        .hero-pct { font-size: 0.95rem; font-weight: 600; }
+        .content-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+        .toc-mobile {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 18px;
+        }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #111827; }
+        .toc-mobile a, .toc-side a {
+            display: block;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.88rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .toc-mobile a:hover, .toc-side a:hover { color: #2563eb; }
+        .toc-side { display: none; }
+        .summary-section {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 18px;
+            scroll-margin-top: 16px;
+        }
+        .summary-section h2 {
+            color: #111827;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d1d5db;
+        }
+        .ai-content {
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.8;
+            white-space: pre-line;
+            word-break: break-word;
+        }
+        .ai-content a { color: #2563eb; text-decoration: none; word-break: break-all; }
+        #cusdis_thread iframe { min-height: 700px !important; width: 100%; }
+        .pair-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+        .fab {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #111827;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        footer {
+            text-align: center;
+            padding: 16px 0;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 8px;
+        }
+        @media (min-width: 1000px) {
+            .content-grid { grid-template-columns: minmax(0, 1fr) 240px; }
+            .toc-mobile { display: none; }
+            .toc-side {
+                display: block;
+            }
+            .toc-side .toc-inner {
+                position: sticky;
+                top: 20px;
+                background: #f9fafb;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                padding: 14px 16px;
+            }
+            .toc-side .toc-title { font-weight: 600; color: #111827; margin-bottom: 8px; font-size: 0.9rem; }
+            .pair-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+            #cusdis_thread iframe { min-height: 1100px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width:1200px;margin:0 auto;padding:4px 0 0;border-bottom:2px solid #111827"><a href="../index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#111827;color:#ffffff;">🇰🇷 국장 써머리</a><a href="../us/index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#f3f4f6;color:#374151;border:1px solid #e5e7eb;border-bottom:none;">🇺🇸 미국장 리포트</a></div>
+    <div class="layout">
+        <header>
+            <h1>📊 [2026.09.11] Daily Market Brief</h1>
+            <div class="timestamp">시장: ALL &middot; 2026-09-11 15:45 생성 &middot; <a href="../index.html">아카이브</a></div>
+        </header>
+
+        <div class="hero-grid">
+            <div class="hero-card">
+                <div class="hero-label">거래대금 합계</div>
+                <div class="hero-value">25.7조원</div>
+                <div class="hero-pct" style="color:#6b7280">오늘</div>
+            </div>
+        </div>
+
+        <details class="toc-mobile">
+            <summary>목차</summary>
+            <div style="margin-top:8px">
+                <a href="#sec-1">1️⃣ 지수 현황</a>
+                <a href="#sec-2">2️⃣ 마켓 코멘트</a>
+                <a href="#sec-3">🏛️ 시장별 거래대금 (오늘, KRX 기준)</a>
+                <a href="#sec-4">📅 최근 5일 거래대금</a>
+                <a href="#sec-5">3️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-6">4️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-7">5️⃣ 지수 기여도 Top 5</a>
+                <a href="#sec-8">6️⃣ 업종 &amp; 테마</a>
+                <a href="#sec-9">7️⃣ Key News &amp; 공시</a>
+                <a href="#sec-10">8️⃣ 텔레그램 채널 핵심 인사이트</a>
+                <a href="#comments">💬 댓글</a>
+            </div>
+        </details>
+
+        <div class="content-grid">
+            <main>
+            <div class="summary-section" id="sec-0">
+                
+                <div class="ai-content">오늘 브리핑을 작성합니다. 먼저 데이터 상태를 짚고 넘어가면: 지수 현황이 0.00으로 수집되었고, 상승/하락 종목·기여도·업종/테마·뉴스·텔레그램 데이터가 입력에 없습니다. 원칙(미확인 수치 생성 금지)에 따라 해당 섹션은 임의로 채우지 않고 &quot;데이터 미수집&quot;으로 표기했으며, 확인 가능한 거래대금·리포트·공시 기반으로만 작성했습니다.
+
+---</div>
+            </div>
+            <div class="summary-section" id="sec-1">
+                <h2>1️⃣ 지수 현황</h2>
+                <div class="ai-content">- 코스피/코스닥 지수 데이터 미수집 (수집값 0.00 — 데이터 파이프라인 오류로 판단, 종가/등락률 기재 불가)
+- 외국인/기관 순매수 데이터 미수집
+- 거래대금 기준 코멘트: 전일 대비 거래대금 급감(40.4조원 → 25.7조원, <span style="color:#dc2626;font-weight:600">-36%</span>), 시장 에너지 뚜렷하게 위축</div>
+            </div>
+            <div class="summary-section" id="sec-2">
+                <h2>2️⃣ 마켓 코멘트</h2>
+                <div class="ai-content">- 양 시장 거래대금이 전일 대비 36% 감소하며 최근 5일 중 최저 수준. 9/10 코스닥 11.4조원까지 늘었던 개인성 자금 유입이 하루 만에 절반 수준(6.4조원)으로 축소.
+- 리서치 흐름상 오늘 최대 화두는 HD현대중공업의 발전엔진·SMR 주기기 대규모 증설 공시. iM·LS·상상인·메리츠·유진 등 5개사가 당일 코멘트 발간, 메리츠는 &quot;조선주 재반등 신호탄&quot;으로 규정.
+- 내일 주목 포인트: 미국 8월 PPI 발표 후 금리 경계(SK증권·LS증권 리포트), 중동 리스크에 따른 FOMC 부담(IBK증권 Market Comment) 등 다음 주 FOMC 앞둔 관망 구간.</div>
+            </div>
+            <div class="summary-section" id="sec-3">
+                <h2>🏛️ 시장별 거래대금 (오늘, KRX 기준)</h2>
+                <div class="ai-content">- 코스피: 19.4조원 (75.3%)
+- 코스닥: 6.4조원 (24.7%)
+- 합계: 25.7조원</div>
+            </div>
+            <div class="summary-section" id="sec-4">
+                <h2>📅 최근 5일 거래대금</h2>
+                <div class="ai-content">- 09/07: 코스피 21.8조원 / 코스닥 6.3조원 / 합계 28.1조원
+- 09/08: 코스피 26.2조원 / 코스닥 8.2조원 / 합계 34.3조원
+- 09/09: 코스피 22.6조원 / 코스닥 7.7조원 / 합계 30.3조원
+- 09/10: 코스피 28.9조원 / 코스닥 11.4조원 / 합계 40.4조원
+- 09/11: 코스피 19.4조원 / 코스닥 6.4조원 / 합계 25.7조원 ◀️ 오늘
+- 코멘트: 9/10 40.4조원으로 단기 고점 형성 후 오늘 급감. 이벤트(FOMC) 앞둔 거래 위축 국면.</div>
+            </div>
+            <div class="pair-grid">
+            <div class="summary-section" id="sec-5">
+                <h2>3️⃣ 주요 상승 종목 (Top 10)</h2>
+                <div class="ai-content">- 데이터 미수집. 종목별 등락 데이터가 입력되지 않아 기재 불가.</div>
+            </div>
+            <div class="summary-section" id="sec-6">
+                <h2>4️⃣ 주요 하락 종목 (Worst 10)</h2>
+                <div class="ai-content">- 데이터 미수집. 종목별 등락 데이터가 입력되지 않아 기재 불가.</div>
+            </div>
+            </div>
+            <div class="summary-section" id="sec-7">
+                <h2>5️⃣ 지수 기여도 Top 5</h2>
+                <div class="ai-content">- 데이터 미수집.</div>
+            </div>
+            <div class="summary-section" id="sec-8">
+                <h2>6️⃣ 업종 &amp; 테마</h2>
+                <div class="ai-content">- 업종/테마 등락 데이터 미수집.
+- 리포트 기준 참고: 조선·엔진 밸류체인(HD현대중공업 증설 공시 관련 5개사 리포트), 태양광(IBK &quot;Solar를 지우는 태양광 업체들&quot;), 반도체 소재·부품(나노신소재, 샘씨엔에스, 엠케이전자, 아모텍) 쪽에 리서치 커버리지 집중.</div>
+            </div>
+            <div class="summary-section" id="sec-9">
+                <h2>7️⃣ Key News &amp; 공시</h2>
+                <div class="ai-content">[공시]
+- 계룡건설산업, 주요사항보고서(영업정지) 기재정정 (건설)
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911000364">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911000364</a>
+- 케이티, 자기주식취득결과보고서 제출 (통신)
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911000358">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911000358</a>
+- KG모빌리티, 유상증자·주식관련사채 발행결과 자율공시 (자동차)
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911800341">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911800341</a>
+- 넥사다이내믹스·파이온엑스·아티스트스튜디오 유상증자 결정(정정 포함), 엑스페릭스·다보링크 전환사채 발행결정 정정 — 중소형주 자금조달 공시 다수
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911000372">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911000372</a>
+- 엔젠바이오, 유상증자·주식관련사채 청약결과 자율공시 (바이오)
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911900402">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911900402</a>
+
+[증권사 리포트]
+- HD현대중공업: 엔진·SMR 주기기 증설 공시에 리포트 집중. iM증권 목표가 860,000원(Buy), LS증권 800,000원(Buy). 메리츠 &quot;조선주 재반등 신호탄&quot; (조선)
+- 나노신소재: iM증권 Buy, 목표가 80,000원 — &quot;2026년도 좋고, 2027년은 더 좋다&quot; (2차전지/반도체 소재)
+- 아모텍: IBK투자증권 목표가 30,000원 — &quot;고객들 줄서기가 시작되었다&quot; (전자부품)
+- LS: LS증권 매수, 목표가 540,000원 — &quot;보수적으로 봐도 상승여력 충분&quot; (전선/전력기기)
+- 샘씨엔에스: LS증권 Buy, 목표가 25,000원 — Probe Card 고성장 수혜 (반도체 부품)</div>
+            </div>
+            <div class="summary-section" id="sec-10">
+                <h2>8️⃣ 텔레그램 채널 핵심 인사이트</h2>
+                <div class="ai-content">- 금일 텔레그램 수집 데이터 없음.
+
+---
+
+참고: 지수·종목 등락·수급·업종/테마 데이터가 파이프라인에서 누락된 상태입니다(지수 0.00 수집). 해당 수집 모듈 점검 후 재실행하면 3️⃣~6️⃣ 섹션을 채운 완전판을 생성할 수 있습니다.</div>
+            </div>
+
+        <div class="summary-section" id="comments">
+            <h2>💬 댓글</h2>
+            <div id="cusdis_thread"
+                data-host="https://cusdis.com"
+                data-app-id="373cac9f-0992-4666-aeed-873a86399094"
+                data-page-id="20260911_all"
+                data-page-url="https://inandout-kr.github.io/market-summary/reports/20260911_all.html"
+                data-page-title="[2026.09.11] 전체 시장 마감 써머리"
+            ></div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        </div>
+            </main>
+            <aside class="toc-side">
+                <div class="toc-inner">
+                    <div class="toc-title">목차</div>
+                    <a href="#sec-1">1️⃣ 지수 현황</a>
+                <a href="#sec-2">2️⃣ 마켓 코멘트</a>
+                <a href="#sec-3">🏛️ 시장별 거래대금 (오늘, KRX 기준)</a>
+                <a href="#sec-4">📅 최근 5일 거래대금</a>
+                <a href="#sec-5">3️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-6">4️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-7">5️⃣ 지수 기여도 Top 5</a>
+                <a href="#sec-8">6️⃣ 업종 &amp; 테마</a>
+                <a href="#sec-9">7️⃣ Key News &amp; 공시</a>
+                <a href="#sec-10">8️⃣ 텔레그램 채널 핵심 인사이트</a>
+                <a href="#comments">💬 댓글</a>
+                </div>
+            </aside>
+        </div>
+
+        <a class="fab" href="#comments" aria-label="댓글로 이동">💬</a>
+
+        <footer>
+            시장 마감 써머리 봇 &middot; 생성: 2026-09-11 15:45
+        </footer>
+    </div>
+</body>
+</html>
