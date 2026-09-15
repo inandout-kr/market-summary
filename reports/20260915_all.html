@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[2026.09.15] 전체 시장 마감 써머리</title>
+    <meta property="og:title" content="[2026.09.15] 전체 시장 마감 써머리">
+    <meta property="og:description" content="코스피 6,627.26 (-0.85%) · 코스닥 812.41 (+0.70%) · 거래대금 합계 22.3조원">
+    <meta property="og:url" content="https://inandout-kr.github.io/market-summary/reports/20260915_all.html">
+    <meta property="og:type" content="article">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #ffffff;
+            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .layout { max-width: 1200px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 20px 0 16px;
+            margin-bottom: 20px;
+        }
+        header h1 { color: #111827; font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+        header .timestamp { color: #6b7280; font-size: 0.9rem; }
+        header .timestamp a { color: #2563eb; text-decoration: none; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .hero-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .hero-label { color: #6b7280; font-size: 0.82rem; margin-bottom: 4px; }
+        .hero-value { color: #111827; font-size: 1.4rem; font-weight: 700; }
+        .hero-pct { font-size: 0.95rem; font-weight: 600; }
+        .content-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+        .toc-mobile {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 18px;
+        }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #111827; }
+        .toc-mobile a, .toc-side a {
+            display: block;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.88rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .toc-mobile a:hover, .toc-side a:hover { color: #2563eb; }
+        .toc-side { display: none; }
+        .summary-section {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 18px;
+            scroll-margin-top: 16px;
+        }
+        .summary-section h2 {
+            color: #111827;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d1d5db;
+        }
+        .ai-content {
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.8;
+            white-space: pre-line;
+            word-break: break-word;
+        }
+        .ai-content a { color: #2563eb; text-decoration: none; word-break: break-all; }
+        #cusdis_thread iframe { min-height: 700px !important; width: 100%; }
+        .pair-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+        .fab {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #111827;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        footer {
+            text-align: center;
+            padding: 16px 0;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 8px;
+        }
+        @media (min-width: 1000px) {
+            .content-grid { grid-template-columns: minmax(0, 1fr) 240px; }
+            .toc-mobile { display: none; }
+            .toc-side {
+                display: block;
+            }
+            .toc-side .toc-inner {
+                position: sticky;
+                top: 20px;
+                background: #f9fafb;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                padding: 14px 16px;
+            }
+            .toc-side .toc-title { font-weight: 600; color: #111827; margin-bottom: 8px; font-size: 0.9rem; }
+            .pair-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+            #cusdis_thread iframe { min-height: 1100px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width:1200px;margin:0 auto;padding:4px 0 0;border-bottom:2px solid #111827"><a href="../index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#111827;color:#ffffff;">🇰🇷 국장 써머리</a><a href="../us/index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#f3f4f6;color:#374151;border:1px solid #e5e7eb;border-bottom:none;">🇺🇸 미국장 리포트</a></div>
+    <div class="layout">
+        <header>
+            <h1>📊 [2026.09.15] Daily Market Brief</h1>
+            <div class="timestamp">시장: ALL &middot; 2026-09-15 16:05 생성 &middot; <a href="../index.html">아카이브</a></div>
+        </header>
+
+        <div class="hero-grid">
+            <div class="hero-card">
+                <div class="hero-label">코스피</div>
+                <div class="hero-value">6,627.26</div>
+                <div class="hero-pct" style="color:#dc2626">-0.85%</div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-label">코스닥</div>
+                <div class="hero-value">812.41</div>
+                <div class="hero-pct" style="color:#16a34a">+0.70%</div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-label">거래대금 합계</div>
+                <div class="hero-value">22.3조원</div>
+                <div class="hero-pct" style="color:#6b7280">오늘</div>
+            </div>
+        </div>
+
+        <details class="toc-mobile">
+            <summary>목차</summary>
+            <div style="margin-top:8px">
+                <a href="#sec-0">1️⃣ 지수 현황</a>
+                <a href="#sec-1">2️⃣ 마켓 코멘트</a>
+                <a href="#sec-2">🏛️ 시장별 거래대금 (오늘)</a>
+                <a href="#sec-3">📅 최근 5일 거래대금</a>
+                <a href="#sec-4">3️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-5">4️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-6">5️⃣ 지수 기여도 Top 5</a>
+                <a href="#sec-7">6️⃣ 업종 &amp; 테마</a>
+                <a href="#sec-8">7️⃣ Key News &amp; 공시</a>
+                <a href="#sec-9">8️⃣ 텔레그램 채널 핵심 인사이트</a>
+                <a href="#comments">💬 댓글</a>
+            </div>
+        </details>
+
+        <div class="content-grid">
+            <main>
+            <div class="summary-section" id="sec-0">
+                <h2>1️⃣ 지수 현황</h2>
+                <div class="ai-content">코스피: 6,627.26 | -57.11p | <span style="color:#dc2626;font-weight:600">-0.85%</span> | 거래대금 16.2조원
+코스닥: 812.41 | +5.62p | <span style="color:#16a34a;font-weight:600">+0.70%</span> | 거래대금 6.1조원
+
+코스피 외국인·기관 동반 순매도. 투자자별 확정 순매수 금액은 미제공(텔레그램: epic AI - 투자 어시스턴트, 장마감 시황).
+
+전일 대비 거래대금 감소 속 코스피 대형주 약세와 코스닥 테마주 강세가 병존.</div>
+            </div>
+            <div class="summary-section" id="sec-1">
+                <h2>2️⃣ 마켓 코멘트</h2>
+                <div class="ai-content">조선·우주항공과국방 약세가 코스피 하락에 반영됐고, 2차전지·양자암호·보안 테마는 상승.
+삼성전자우와 LG에너지솔루션이 지수 하락을 일부 상쇄했지만, 합산 거래대금은 최근 5거래일 중 최저.
+내일은 미국 금리·유가 흐름과 보안·2차전지 강세 지속 여부 점검. LS증권이 제시한 9/15 Clarity Act 필리버스터 종결 표결의 결과도 확인 대상(리포트: LS증권/선유진).</div>
+            </div>
+            <div class="summary-section" id="sec-2">
+                <h2>🏛️ 시장별 거래대금 (오늘)</h2>
+                <div class="ai-content">KRX 기준 · 제공 집계
+
+코스피: 16.2조원 | 72.7%
+코스닥: 6.1조원 | 27.3%
+합계: 22.3조원</div>
+            </div>
+            <div class="summary-section" id="sec-3">
+                <h2>📅 최근 5일 거래대금</h2>
+                <div class="ai-content">09/09: 코스피 22.6조원 / 코스닥 7.7조원 / 합계 30.3조원
+09/10: 코스피 28.9조원 / 코스닥 11.4조원 / 합계 40.4조원
+09/11: 코스피 19.7조원 / 코스닥 6.4조원 / 합계 26.1조원
+09/14: 코스피 21.6조원 / 코스닥 6.0조원 / 합계 27.6조원
+09/15: 코스피 16.2조원 / 코스닥 6.1조원 / 합계 22.3조원 ◀️ 오늘
+
+합계는 09/10 고점 이후 전반적으로 감소. 오늘은 전일 대비 코스피 거래대금이 줄고 코스닥은 소폭 증가.
+09/10 합계는 제공값을 유지했으며, 시장별 표시금액의 합산과 차이가 있음.</div>
+            </div>
+            <div class="pair-grid">
+            <div class="summary-section" id="sec-4">
+                <h2>3️⃣ 주요 상승 종목 (Top 10)</h2>
+                <div class="ai-content">한국첨단소재 | <span style="color:#16a34a;font-weight:600">+29.98%</span> | 3,360원
+양자암호/양자컴퓨팅 테마 연동. AI 개발 속도조절 논의 이후 양자암호·보안주 동반 강세가 보도됨(뉴시스).
+<a href="https://n.news.naver.com/mnews/article/003/0014191750">https://n.news.naver.com/mnews/article/003/0014191750</a>
+
+SHD | <span style="color:#16a34a;font-weight:600">+29.97%</span> | 9,800원
+뉴스투데이는 원화 강세에 따른 원재료 수입 비용 부담 완화를 상승 배경으로 지목. 철강주 강세와 연동.
+<a href="https://www.news2day.co.kr/article/20260915500093">https://www.news2day.co.kr/article/20260915500093</a>
+
+엔젠바이오 | <span style="color:#16a34a;font-weight:600">+29.94%</span> | 1,649원
+NGS 기반 정밀진단·유전자 분석 사업이 부각됐다는 보도. 의료AI·유전자 분석 테마 연동으로 분류(핀포인트뉴스).
+<a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=487214">https://www.pinpointnews.co.kr/news/articleView.html?idxno=487214</a>
+
+이뮨온시아 | <span style="color:#16a34a;font-weight:600">+29.94%</span> | 3,515원
+IMC-002 임상 1b상 투약 대상을 췌장암 환자까지 확대했다는 소식이 상승 재료(컨슈머타임스).
+<a href="https://www.cstimes.com/news/articleView.html?idxno=720698">https://www.cstimes.com/news/articleView.html?idxno=720698</a>
+
+아톤 | <span style="color:#16a34a;font-weight:600">+29.84%</span> | 6,310원
+AI 개발 속도조절 논의에 따른 양자암호·보안주 급등 보도. 제공 테마에서도 양자암호·스테이블코인·정보보안 대표종목으로 중복 포함(뉴시스).
+<a href="https://n.news.naver.com/mnews/article/003/0014191750">https://n.news.naver.com/mnews/article/003/0014191750</a>
+
+YTN | <span style="color:#16a34a;font-weight:600">+29.80%</span> | 2,635원
+매각 과정에 대한 감사원 지적 보도와 최대주주·지배구조 관련 이슈가 상승 재료로 부각(전자신문).
+<a href="https://n.news.naver.com/mnews/article/030/0003466839">https://n.news.naver.com/mnews/article/030/0003466839</a>
+
+삼현 | <span style="color:#16a34a;font-weight:600">+29.80%</span> | 52,700원
+휴머노이드·로봇 부품주 동반 강세와 관련 자금 유입이 보도됨. 로봇·피지컬 AI 테마 연동(잡포스트).
+<a href="https://www.job-post.co.kr/news/articleView.html?idxno=227646">https://www.job-post.co.kr/news/articleView.html?idxno=227646</a>
+
+한컴위드 | <span style="color:#16a34a;font-weight:600">+29.78%</span> | 5,230원
+양자암호·보안주 동반 급등 보도에 포함. 스테이블코인·정보보안 테마 연동(뉴시스).
+<a href="https://n.news.naver.com/mnews/article/003/0014191750">https://n.news.naver.com/mnews/article/003/0014191750</a>
+
+아이티센피엔에스 | <span style="color:#16a34a;font-weight:600">+29.78%</span> | 2,680원
+IT 인프라·솔루션 사업의 보안 관련성이 부각됐다는 보도. 보안 테마 연동이며 개별 신규 계약 근거는 미제공(핀포인트뉴스).
+<a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=487150">https://www.pinpointnews.co.kr/news/articleView.html?idxno=487150</a>
+
+삼익제약 | <span style="color:#16a34a;font-weight:600">+26.11%</span> | 11,690원
+탈모 치료제 관련주 거래 집중이 보도됨. 탈모 치료 테마 연동이며 구체적인 정책 확정 내용은 미제공(잡포스트).
+<a href="https://www.job-post.co.kr/news/articleView.html?idxno=227653">https://www.job-post.co.kr/news/articleView.html?idxno=227653</a></div>
+            </div>
+            <div class="summary-section" id="sec-5">
+                <h2>4️⃣ 주요 하락 종목 (Worst 10)</h2>
+                <div class="ai-content">카프로 | <span style="color:#dc2626;font-weight:600">-38.03%</span> | 44원
+제공 뉴스는 다른 화학업체 중심으로, 당일 급락과 직접 연결되는 개별 재료는 확인되지 않음. 수급 요인 추정.
+
+원풍물산 | <span style="color:#dc2626;font-weight:600">-29.29%</span> | 70원
+시가총액 요건 미달에 따른 상장폐지 보도. 상장폐지 관련 수급 요인 추정(더퍼블릭).
+<a href="https://www.thepublic.kr/news/articleView.html?idxno=318111">https://www.thepublic.kr/news/articleView.html?idxno=318111</a>
+
+코스나인 | <span style="color:#dc2626;font-weight:600">-28.57%</span> | 5원
+제공된 회전율·과거 업종 기사만으로 당일 급락 원인을 특정하기 어려움. 수급 요인 추정.
+
+자람테크놀로지 | <span style="color:#dc2626;font-weight:600">-23.93%</span> | 16,240원
+해외 고객향 반도체 공급계약 해지 보도가 직접적인 하락 재료(지디넷코리아).
+<a href="https://n.news.naver.com/mnews/article/092/0002437493">https://n.news.naver.com/mnews/article/092/0002437493</a>
+
+코다코 | <span style="color:#dc2626;font-weight:600">-23.67%</span> | 229원
+전일 기준 정리매매 진행 사실이 보도됨. 상장폐지 확정 이후 정리매매 과정의 수급 요인 추정(아주경제).
+<a href="https://www.ajunews.com/view/20260914155934717">https://www.ajunews.com/view/20260914155934717</a>
+
+수성웹툰 | <span style="color:#dc2626;font-weight:600">-17.54%</span> | 141원
+시가총액 미달 관리종목으로 언급된 보도. 상장유지 요건 관련 수급 요인 추정(the-biz.co.kr).
+<a href="http://www.the-biz.co.kr/news/articleView.html?idxno=727653">http://www.the-biz.co.kr/news/articleView.html?idxno=727653</a>
+
+유진테크놀로지 | <span style="color:#dc2626;font-weight:600">-17.03%</span> | 1,281원
+제공 기사만으로 당일 급락을 설명할 개별 공시·사건은 확인되지 않음. 수급 요인 추정.
+
+리파인 | <span style="color:#dc2626;font-weight:600">-16.96%</span> | 14,250원
+제공 자료에서 당일 급락과 직접 연결되는 신규 공시·사건은 확인되지 않음. 수급 요인 추정.
+
+골드앤에스 | <span style="color:#dc2626;font-weight:600">-15.85%</span> | 414원
+시가총액 요건 미달 관리종목으로 거론된 보도. 상장유지 요건 관련 수급 요인 추정(the-biz.co.kr).
+<a href="http://www.the-biz.co.kr/news/articleView.html?idxno=727653">http://www.the-biz.co.kr/news/articleView.html?idxno=727653</a>
+
+앤씨앤 | <span style="color:#dc2626;font-weight:600">-14.77%</span> | 2,135원
+주식병합 이후 주가 하락과 시가총액 요건 문제가 보도됨. 상장유지 요건 관련 수급 요인 추정(시사위크).
+<a href="https://www.sisaweek.com/news/articleView.html?idxno=237045">https://www.sisaweek.com/news/articleView.html?idxno=237045</a></div>
+            </div>
+            </div>
+            <div class="summary-section" id="sec-6">
+                <h2>5️⃣ 지수 기여도 Top 5</h2>
+                <div class="ai-content">제공 자료의 기여도 절댓값 순.
+
+SK하이닉스 | <span style="color:#dc2626;font-weight:600">-0.1467%</span>p | <span style="color:#dc2626;font-weight:600">-0.65%</span>
+외국인 매도가 삼성전자·SK하이닉스에 집중됐다는 보도. 미국 반도체주 하락과 AI 개발 속도조절 논의가 배경으로 제시됨(SBS Biz).
+<a href="https://biz.sbs.co.kr/article_hub/20000334751?division=NAVER">https://biz.sbs.co.kr/article_hub/20000334751?division=NAVER</a>
+
+한화에어로스페이스 | <span style="color:#dc2626;font-weight:600">-0.0654%</span>p | <span style="color:#dc2626;font-weight:600">-6.51%</span>
+우주항공과국방 업종 약세와 동반 하락. 제공 뉴스에서 직접적인 개별 악재는 확인되지 않아 수급 요인 추정.
+
+LG에너지솔루션 | <span style="color:#16a34a;font-weight:600">+0.0624%</span>p | <span style="color:#16a34a;font-weight:600">+3.98%</span>
+2차전지(생산) 테마 연동. 미래에셋증권은 ‘드디어 서프라이즈’ 보고서에서 매수·목표가 510,000원 제시.
+
+삼성전자우 | <span style="color:#16a34a;font-weight:600">+0.0556%</span>p | <span style="color:#16a34a;font-weight:600">+2.02%</span>
+라이프자산운용의 우선주 소각 주주제안 보도가 상승 재료. 회사의 소각 확정과는 구분(서울경제).
+<a href="https://www.sedaily.com/article/20091008?ref=naver">https://www.sedaily.com/article/20091008?ref=naver</a>
+
+삼성전자 | <span style="color:#dc2626;font-weight:600">-0.0533%</span>p | <span style="color:#dc2626;font-weight:600">-0.20%</span>
+외국인 매도 집중 보도와 반도체주 약세가 배경. 우선주 소각 제안이 부각된 삼성전자우와 주가 방향이 엇갈림(SBS Biz).
+<a href="https://biz.sbs.co.kr/article_hub/20000334751?division=NAVER">https://biz.sbs.co.kr/article_hub/20000334751?division=NAVER</a></div>
+            </div>
+            <div class="summary-section" id="sec-7">
+                <h2>6️⃣ 업종 &amp; 테마</h2>
+                <div class="ai-content">상승 업종 Top 5
+전기제품 <span style="color:#16a34a;font-weight:600">+3.41%</span>
+생명과학도구및서비스 <span style="color:#16a34a;font-weight:600">+3.05%</span>
+철강 <span style="color:#16a34a;font-weight:600">+1.96%</span>
+전자제품 <span style="color:#16a34a;font-weight:600">+1.82%</span>
+화학 <span style="color:#16a34a;font-weight:600">+1.72%</span>
+
+하락 업종 Top 3
+조선 <span style="color:#dc2626;font-weight:600">-5.56%</span>
+우주항공과국방 <span style="color:#dc2626;font-weight:600">-5.13%</span>
+생명보험 <span style="color:#dc2626;font-weight:600">-3.84%</span>
+
+주도 테마 Top 5
+양자암호/양자컴퓨팅 <span style="color:#16a34a;font-weight:600">+5.43%</span> | 한국첨단소재, 아톤
+미디어(방송/신문) <span style="color:#16a34a;font-weight:600">+3.70%</span> | YTN, iMBC
+2차전지(생산) <span style="color:#16a34a;font-weight:600">+3.49%</span> | LG에너지솔루션, SK이노베이션
+스테이블코인 <span style="color:#16a34a;font-weight:600">+3.39%</span> | 아톤, 한컴위드
+보안주(정보) <span style="color:#16a34a;font-weight:600">+3.28%</span> | 아톤, 한컴위드
+
+아톤이 양자암호·스테이블코인·정보보안에, 한컴위드가 스테이블코인·정보보안에 중복 포함. 보안·인증 관련 종목을 중심으로 테마가 연결됨.</div>
+            </div>
+            <div class="summary-section" id="sec-8">
+                <h2>7️⃣ Key News &amp; 공시</h2>
+                <div class="ai-content">가. 미국 국채금리 상승 속 외국인 매도로 코스피 하락 마감 보도(코스피·대형주).
+출처: 한국경제
+<a href="https://n.news.naver.com/mnews/article/015/0005332522">https://n.news.naver.com/mnews/article/015/0005332522</a>
+
+나. 라이프자산운용의 우선주 소각 제안 이후 삼성전자우 강세 보도. 주주제안 단계이며 회사의 소각 결정은 확인되지 않음(삼성전자우·삼성전자).
+출처: 서울경제
+<a href="https://www.sedaily.com/article/20091008?ref=naver">https://www.sedaily.com/article/20091008?ref=naver</a>
+
+다. IMC-002 임상 투약 대상의 췌장암 환자 확대 소식에 상한가(이뮨온시아).
+출처: 컨슈머타임스
+<a href="https://www.cstimes.com/news/articleView.html?idxno=720698">https://www.cstimes.com/news/articleView.html?idxno=720698</a>
+
+라. 해외 고객향 반도체 공급계약 해지 보도 이후 급락(자람테크놀로지).
+출처: 지디넷코리아
+<a href="https://n.news.naver.com/mnews/article/092/0002437493">https://n.news.naver.com/mnews/article/092/0002437493</a>
+
+마. 제3자 배정 유상증자 결정 철회 공시. 자금조달 계획 변경이며 당일 주가 영향은 제공 자료에서 확인되지 않음(바른손이앤에이).
+출처: DART
+<a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260915900525">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260915900525</a>
+
+증권사 리포트 주요 내용
+
+LG에너지솔루션: 미래에셋증권 매수, 목표가 510,000원. ‘드디어 서프라이즈’.
+
+삼성SDI: 미래에셋증권 매수, 목표가 1,000,000원. ‘3개 분기 연속 서프라이즈 예상’.
+
+LG씨엔에스: 교보증권 Buy, 목표가 89,000원. AI 데이터센터 컴퓨팅 사업 개시 관련 분석.
+
+HD현대중공업: IBK투자증권 매수, 목표가 840,000원. 수주 확대 관련 분석.
+
+이전 목표가·투자의견이 없어 상향·하향 또는 의견 변경 여부는 확인되지 않음.</div>
+            </div>
+            <div class="summary-section" id="sec-9">
+                <h2>8️⃣ 텔레그램 채널 핵심 인사이트</h2>
+                <div class="ai-content">AWAKE - 마켓 브리핑
+14:42 기준 시가총액 대비로 정렬한 외국인 잠정 순매수 상위에 삼성전자우를 제시. 장중 잠정 자료로, 확정 순매수 금액은 미제공.
+
+타점 읽어주는 여자(타자)
+마감 시황에서 이차전지·로봇 강세에 따른 코스닥 차별화를 설명. 오후 테마동향에서는 양자암호·스테이블코인·정보보안 강세를 정리.
+
+머니터링 - 국내공시요약
+쎄크가 한화에어로스페이스와 비파괴검사장비 공급계약을 체결했다고 요약. 계약금액 74억원, 최근 매출액 대비 12.5%(텔레그램: 머니터링 - 국내공시요약).</div>
+            </div>
+
+        <div class="summary-section" id="comments">
+            <h2>💬 댓글</h2>
+            <div id="cusdis_thread"
+                data-host="https://cusdis.com"
+                data-app-id="373cac9f-0992-4666-aeed-873a86399094"
+                data-page-id="20260915_all"
+                data-page-url="https://inandout-kr.github.io/market-summary/reports/20260915_all.html"
+                data-page-title="[2026.09.15] 전체 시장 마감 써머리"
+            ></div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        </div>
+            </main>
+            <aside class="toc-side">
+                <div class="toc-inner">
+                    <div class="toc-title">목차</div>
+                    <a href="#sec-0">1️⃣ 지수 현황</a>
+                <a href="#sec-1">2️⃣ 마켓 코멘트</a>
+                <a href="#sec-2">🏛️ 시장별 거래대금 (오늘)</a>
+                <a href="#sec-3">📅 최근 5일 거래대금</a>
+                <a href="#sec-4">3️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-5">4️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-6">5️⃣ 지수 기여도 Top 5</a>
+                <a href="#sec-7">6️⃣ 업종 &amp; 테마</a>
+                <a href="#sec-8">7️⃣ Key News &amp; 공시</a>
+                <a href="#sec-9">8️⃣ 텔레그램 채널 핵심 인사이트</a>
+                <a href="#comments">💬 댓글</a>
+                </div>
+            </aside>
+        </div>
+
+        <a class="fab" href="#comments" aria-label="댓글로 이동">💬</a>
+
+        <footer>
+            시장 마감 써머리 봇 &middot; 생성: 2026-09-15 16:05
+        </footer>
+    </div>
+</body>
+</html>
