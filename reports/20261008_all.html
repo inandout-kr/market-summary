@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[2026.10.08] 전체 시장 마감 써머리</title>
+    <meta property="og:title" content="[2026.10.08] 전체 시장 마감 써머리">
+    <meta property="og:description" content="KOSPI 6,625.93 (-2.62%) · KOSDAQ 892.27 (-0.69%)">
+    <meta property="og:url" content="https://inandout-kr.github.io/market-summary/reports/20261008_all.html">
+    <meta property="og:type" content="article">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #ffffff;
+            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .layout { max-width: 1200px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 20px 0 16px;
+            margin-bottom: 20px;
+        }
+        header h1 { color: #111827; font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+        header .timestamp { color: #6b7280; font-size: 0.9rem; }
+        header .timestamp a { color: #2563eb; text-decoration: none; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .hero-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .hero-label { color: #6b7280; font-size: 0.82rem; margin-bottom: 4px; }
+        .hero-value { color: #111827; font-size: 1.4rem; font-weight: 700; }
+        .hero-pct { font-size: 0.95rem; font-weight: 600; }
+        .content-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+        .toc-mobile {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 18px;
+        }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #111827; }
+        .toc-mobile a, .toc-side a {
+            display: block;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.88rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .toc-mobile a:hover, .toc-side a:hover { color: #2563eb; }
+        .toc-side { display: none; }
+        .summary-section {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 18px;
+            scroll-margin-top: 16px;
+        }
+        .summary-section h2 {
+            color: #111827;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d1d5db;
+        }
+        .ai-content {
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.8;
+            white-space: pre-line;
+            word-break: break-word;
+        }
+        .ai-content a { color: #2563eb; text-decoration: none; word-break: break-all; }
+        #cusdis_thread iframe { min-height: 700px !important; width: 100%; }
+        .pair-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+        .fab {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #111827;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        footer {
+            text-align: center;
+            padding: 16px 0;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 8px;
+        }
+        @media (min-width: 1000px) {
+            .content-grid { grid-template-columns: minmax(0, 1fr) 240px; }
+            .toc-mobile { display: none; }
+            .toc-side {
+                display: block;
+            }
+            .toc-side .toc-inner {
+                position: sticky;
+                top: 20px;
+                background: #f9fafb;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                padding: 14px 16px;
+            }
+            .toc-side .toc-title { font-weight: 600; color: #111827; margin-bottom: 8px; font-size: 0.9rem; }
+            .pair-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+            #cusdis_thread iframe { min-height: 1100px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width:1200px;margin:0 auto;padding:4px 0 0;border-bottom:2px solid #111827"><a href="../index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#111827;color:#ffffff;">🇰🇷 국장 써머리</a><a href="../us/index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#f3f4f6;color:#374151;border:1px solid #e5e7eb;border-bottom:none;">🇺🇸 미국장 리포트</a></div>
+    <div class="layout">
+        <header>
+            <h1>📊 [2026.10.08] 시장 마감 리포트</h1>
+            <div class="timestamp">시장: ALL &middot; 2026-10-08 17:51 생성 &middot; <a href="../index.html">아카이브</a></div>
+        </header>
+
+        <div class="hero-grid">
+            <div class="hero-card">
+                <div class="hero-label">KOSPI</div>
+                <div class="hero-value">6,625.93</div>
+                <div class="hero-pct" style="color:#dc2626">-2.62%</div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-label">KOSDAQ</div>
+                <div class="hero-value">892.27</div>
+                <div class="hero-pct" style="color:#dc2626">-0.69%</div>
+            </div>
+        </div>
+
+        <details class="toc-mobile">
+            <summary>목차</summary>
+            <div style="margin-top:8px">
+                <a href="#sec-0">1. 지수 현황</a>
+                <a href="#sec-1">2. 주요 상승 종목</a>
+                <a href="#sec-2">3. 지수 기여도 Top</a>
+                <a href="#sec-3">4. 업종별 동향</a>
+                <a href="#sec-4">5. 테마 동향</a>
+                <a href="#sec-5">6. 주요 뉴스</a>
+                <a href="#comments">💬 댓글</a>
+            </div>
+        </details>
+
+        <div class="content-grid">
+            <main>
+            <div class="summary-section" id="sec-0">
+                <h2>1. 지수 현황</h2>
+                <div class="ai-content">  KOSPI 6,625.93 ▼-177.97 (<span style="color:#dc2626;font-weight:600">-2.62%</span>)
+  KOSDAQ 892.27 ▼-6.16 (<span style="color:#dc2626;font-weight:600">-0.69%</span>)</div>
+            </div>
+            <div class="summary-section" id="sec-1">
+                <h2>2. 주요 상승 종목</h2>
+                <div class="ai-content">  ▲ 형지I&amp;C <span style="color:#16a34a;font-weight:600">+30.00%</span> 559원
+  ▲ 유진테크놀로지 <span style="color:#16a34a;font-weight:600">+30.00%</span> 1,170원
+  ▲ CS <span style="color:#16a34a;font-weight:600">+29.97%</span> 1,145원
+  ▲ HLB바이오스텝 <span style="color:#16a34a;font-weight:600">+29.97%</span> 6,310원
+  ▲ HLB파나진 <span style="color:#16a34a;font-weight:600">+29.96%</span> 1,774원
+  ▲ 뉴인텍 <span style="color:#16a34a;font-weight:600">+29.95%</span> 486원
+  ▲ 바이오인프라 <span style="color:#16a34a;font-weight:600">+29.93%</span> 903원
+  ▲ 삼기에너지솔루션즈 <span style="color:#16a34a;font-weight:600">+29.93%</span> 2,305원
+  ▲ 동양고속 <span style="color:#16a34a;font-weight:600">+29.91%</span> 38,000원
+  ▲ 예선테크 <span style="color:#16a34a;font-weight:600">+29.90%</span> 1,160원</div>
+            </div>
+            <div class="summary-section" id="sec-2">
+                <h2>3. 지수 기여도 Top</h2>
+                <div class="ai-content">  삼성전자 <span style="color:#dc2626;font-weight:600">-0.5718%</span>p
+  SK하이닉스 <span style="color:#dc2626;font-weight:600">-0.4541%</span>p
+  SK스퀘어 <span style="color:#dc2626;font-weight:600">-0.1821%</span>p
+  삼성전기 <span style="color:#dc2626;font-weight:600">-0.0657%</span>p
+  한화에어로스페이스 <span style="color:#dc2626;font-weight:600">-0.0600%</span>p</div>
+            </div>
+            <div class="summary-section" id="sec-3">
+                <h2>4. 업종별 동향</h2>
+                <div class="ai-content">  문구류: <span style="color:#16a34a;font-weight:600">+5.03%</span>
+  판매업체: <span style="color:#16a34a;font-weight:600">+3.23%</span>
+  도로와철도운송: <span style="color:#16a34a;font-weight:600">+2.60%</span>
+  전기제품: <span style="color:#16a34a;font-weight:600">+2.12%</span>
+  디스플레이장비및부품: <span style="color:#16a34a;font-weight:600">+1.84%</span></div>
+            </div>
+            <div class="summary-section" id="sec-4">
+                <h2>5. 테마 동향</h2>
+                <div class="ai-content">  서울고속버스터미널 재개발 수혜 <span style="color:#16a34a;font-weight:600">+7.90%</span> (대표: 동양고속, 천일고속)
+  리비안(RIVIAN) <span style="color:#16a34a;font-weight:600">+3.85%</span> (대표: 유진테크놀로지, 알멕)
+  반도체 기판(FC-BGA/PCB/MLB 등) <span style="color:#16a34a;font-weight:600">+3.19%</span> (대표: 다원넥스뷰, 네오티스)
+  2차전지(나트륨이온) <span style="color:#16a34a;font-weight:600">+2.88%</span> (대표: 더블유씨피, 애경케미칼)
+  캐릭터상품 <span style="color:#16a34a;font-weight:600">+2.33%</span> (대표: 대원미디어, 더핑크퐁컴퍼니)</div>
+            </div>
+            <div class="summary-section" id="sec-5">
+                <h2>6. 주요 뉴스</h2>
+                <div class="ai-content">  - 삼전 주가는 찬바람…&quot;내년 메모리 전망이 중요&quot;
+  - 골드만삭스·모건스탠리 … 솔리다임 이미 IPO 주관사 선정
+  - 거침없이 달리는 주성엔지…하루 거래대금 1조나 몰려
+  - 바이오주 &#x27;펩트론 쇼크&#x27;…실망매물에 줄줄이 하락
+  - &#x27;100조 클럽&#x27; 삼성전자, 주가는 약세 … 증권가선 &quot;아직 저평가&quot;
+
+주요 공시
+  [이연제약] 주요사항보고서(전환사채권발행결정)
+  [에쎈테크] 주권매매거래정지              (주식의 병합, 분할 등 전자등록 변경, 말소)
+  [이렘] 유상증자1차발행가액결정              (주주배정)
+  [케이프] 합병등종료보고서(합병)
+  [이연제약] 주요사항보고서(전환사채권발행결정)
+
+(* LLM API 오류로 인해 자동 생성된 기본 써머리입니다)</div>
+            </div>
+
+        <div class="summary-section" id="comments">
+            <h2>💬 댓글</h2>
+            <div id="cusdis_thread"
+                data-host="https://cusdis.com"
+                data-app-id="373cac9f-0992-4666-aeed-873a86399094"
+                data-page-id="20261008_all"
+                data-page-url="https://inandout-kr.github.io/market-summary/reports/20261008_all.html"
+                data-page-title="[2026.10.08] 전체 시장 마감 써머리"
+            ></div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        </div>
+            </main>
+            <aside class="toc-side">
+                <div class="toc-inner">
+                    <div class="toc-title">목차</div>
+                    <a href="#sec-0">1. 지수 현황</a>
+                <a href="#sec-1">2. 주요 상승 종목</a>
+                <a href="#sec-2">3. 지수 기여도 Top</a>
+                <a href="#sec-3">4. 업종별 동향</a>
+                <a href="#sec-4">5. 테마 동향</a>
+                <a href="#sec-5">6. 주요 뉴스</a>
+                <a href="#comments">💬 댓글</a>
+                </div>
+            </aside>
+        </div>
+
+        <a class="fab" href="#comments" aria-label="댓글로 이동">💬</a>
+
+        <footer>
+            시장 마감 써머리 봇 &middot; 생성: 2026-10-08 17:51
+        </footer>
+    </div>
+</body>
+</html>
