@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[2026.11.18] 전체 시장 마감 써머리</title>
+    <meta property="og:title" content="[2026.11.18] 전체 시장 마감 써머리">
+    <meta property="og:description" content="KOSPI 5,067.44 (+1.99%) · KOSDAQ 662.81 (+1.96%) · KOSPI200 787.71 (-0.17%) · 거래대금 합계 20.3조원">
+    <meta property="og:url" content="https://inandout-kr.github.io/market-summary/reports/20261118_all.html">
+    <meta property="og:type" content="article">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #ffffff;
+            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .layout { max-width: 1200px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 20px 0 16px;
+            margin-bottom: 20px;
+        }
+        header h1 { color: #111827; font-size: 1.6rem; letter-spacing: -0.02em; margin-bottom: 8px; }
+        header .timestamp { color: #6b7280; font-size: 0.9rem; }
+        header .timestamp a { color: #2563eb; text-decoration: none; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .hero-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .hero-label { color: #6b7280; font-size: 0.82rem; margin-bottom: 4px; }
+        .hero-value { color: #111827; font-size: 1.4rem; font-weight: 700; }
+        .hero-pct { font-size: 0.95rem; font-weight: 600; }
+        .content-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+        .toc-mobile {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 18px;
+        }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #111827; }
+        .toc-mobile a, .toc-side a {
+            display: block;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.88rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .toc-mobile a:hover, .toc-side a:hover { color: #2563eb; }
+        .toc-side { display: none; }
+        .summary-section {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 18px;
+            scroll-margin-top: 16px;
+        }
+        .summary-section h2 {
+            color: #111827;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d1d5db;
+        }
+        .ai-content {
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.8;
+            white-space: pre-line;
+            word-break: break-word;
+        }
+        .ai-content a { color: #2563eb; text-decoration: none; word-break: break-all; }
+        #cusdis_thread iframe { min-height: 700px !important; width: 100%; }
+        .pair-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+        .fab {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #111827;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        footer {
+            text-align: center;
+            padding: 16px 0;
+            color: #6b7280;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 8px;
+        }
+        @media (min-width: 1000px) {
+            .content-grid { grid-template-columns: minmax(0, 1fr) 240px; }
+            .toc-mobile { display: none; }
+            .toc-side {
+                display: block;
+            }
+            .toc-side .toc-inner {
+                position: sticky;
+                top: 20px;
+                background: #f9fafb;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                padding: 14px 16px;
+            }
+            .toc-side .toc-title { font-weight: 600; color: #111827; margin-bottom: 8px; font-size: 0.9rem; }
+            .pair-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+            #cusdis_thread iframe { min-height: 1100px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width:1200px;margin:0 auto;padding:4px 0 0;border-bottom:2px solid #111827"><a href="../index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#111827;color:#ffffff;">🇰🇷 국장 써머리</a><a href="../us/index.html" style="display:inline-block;padding:8px 20px;border-radius:8px 8px 0 0;text-decoration:none;font-weight:600;font-size:0.95rem;background:#f3f4f6;color:#374151;border:1px solid #e5e7eb;border-bottom:none;">🇺🇸 미국장 리포트</a></div>
+    <div class="layout">
+        <header>
+            <h1>📊 [2026.11.18] Daily Market Brief</h1>
+            <div class="timestamp">시장: ALL &middot; 2026-11-18 15:53 생성 &middot; <a href="../index.html">아카이브</a></div>
+        </header>
+
+        <div class="hero-grid">
+            <div class="hero-card">
+                <div class="hero-label">KOSPI</div>
+                <div class="hero-value">5,067.44</div>
+                <div class="hero-pct" style="color:#16a34a">+1.99%</div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-label">KOSDAQ</div>
+                <div class="hero-value">662.81</div>
+                <div class="hero-pct" style="color:#16a34a">+1.96%</div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-label">KOSPI200</div>
+                <div class="hero-value">787.71</div>
+                <div class="hero-pct" style="color:#dc2626">-0.17%</div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-label">거래대금 합계</div>
+                <div class="hero-value">20.3조원</div>
+                <div class="hero-pct" style="color:#6b7280">오늘</div>
+            </div>
+        </div>
+
+        <details class="toc-mobile">
+            <summary>목차</summary>
+            <div style="margin-top:8px">
+                <a href="#sec-0">1️⃣ 지수 현황</a>
+                <a href="#sec-1">2️⃣ 마켓 코멘트</a>
+                <a href="#sec-2">🏛️ 시장별 거래대금 (오늘)</a>
+                <a href="#sec-3">📅 최근 5일 거래대금</a>
+                <a href="#sec-4">3️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-5">4️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-6">5️⃣ 지수 기여도 Top 5</a>
+                <a href="#sec-7">6️⃣ 업종 &amp; 테마</a>
+                <a href="#sec-8">7️⃣ Key News &amp; 공시</a>
+                <a href="#sec-9">8️⃣ 텔레그램 채널 핵심 인사이트</a>
+                <a href="#comments">💬 댓글</a>
+            </div>
+        </details>
+
+        <div class="content-grid">
+            <main>
+            <div class="summary-section" id="sec-0">
+                <h2>1️⃣ 지수 현황</h2>
+                <div class="ai-content">- KOSPI 5,067.44 (+98.96, <span style="color:#16a34a;font-weight:600">+1.99%</span>) / 거래대금 14.8조원
+- KOSDAQ 662.81 (+12.75, <span style="color:#16a34a;font-weight:600">+1.96%</span>) / 거래대금 5.5조원
+- KOSPI200 787.71 (+16.97, <span style="color:#16a34a;font-weight:600">+2.20%</span>), 원·달러 환율 1,333.20원 (-2.30, <span style="color:#dc2626;font-weight:600">-0.17%</span>) (텔레그램: 전인구경제연구소 주식공유방)
+- KOSPI 외국인 순매도 기조 (텔레그램: 전인구경제연구소 주식공유방, 정확한 금액 데이터 미확보로 수치 생략)
+- 장중 외국인 잠정 순매수: 아리바이오랩, 안랩, JYP Ent., 로보티즈, 사피엔반도체, 라온시큐어, 원익홀딩스 / 순매도: 이수페타시스, 코리아써키트, 코스메카코리아, 삼성전자우, 심텍, 에이엘로봇, RFHIC (텔레그램: AWAKE 마켓 브리핑)
+- 시장 성격: 엔비디아 호실적발 반도체 대형주 주도 급반등, 하루 만에 5,000선 탈환</div>
+            </div>
+            <div class="summary-section" id="sec-1">
+                <h2>2️⃣ 마켓 코멘트</h2>
+                <div class="ai-content">- 전일 뉴욕증시 하락에도 엔비디아 호실적 발표가 시간외 주가 4%대 상승으로 이어지며 국내 반도체 대형주(SK하이닉스 <span style="color:#16a34a;font-weight:600">+4.19%</span>, 삼성전자 <span style="color:#16a34a;font-weight:600">+2.31%</span>)가 지수를 견인. 전일 5,000선 붕괴 하루 만에 복귀 (출처: 조선비즈 마켓뷰, YTN 속보)
+- 반도체와 함께 로봇(레인보우로보틱스 <span style="color:#16a34a;font-weight:600">+20.06%</span>, 빅웨이브로보틱스 <span style="color:#16a34a;font-weight:600">+29.96%</span>) 테마가 동반 강세를 보이며 대형주+테마 쌍끌이 장세
+- 내일 주목 포인트: 앤트로픽 IPO 수급 변동성 (대신증권 장중시황 &quot;다음 관문은 앤트로픽&quot;, 한화투자증권 산업리포트). 기관 주문이 공모 물량 대비 7배 (출처: 아주뉴스)</div>
+            </div>
+            <div class="summary-section" id="sec-2">
+                <h2>🏛️ 시장별 거래대금 (오늘)</h2>
+                <div class="ai-content">- 코스피 14.8조원 (72.9%)
+- 코스닥 5.5조원 (27.1%)
+- 합계 20.3조원
+※ 제공 데이터 기준 (KRX)</div>
+            </div>
+            <div class="summary-section" id="sec-3">
+                <h2>📅 최근 5일 거래대금</h2>
+                <div class="ai-content">- 최근 5거래일 일자별 거래대금 데이터 미수집으로 금일 생략 (오늘: 코스피 14.8조 + 코스닥 5.5조 = 20.3조원 ◀️ 오늘)</div>
+            </div>
+            <div class="pair-grid">
+            <div class="summary-section" id="sec-4">
+                <h2>3️⃣ 주요 상승 종목 (Top 10)</h2>
+                <div class="ai-content">아리바이오랩 | <span style="color:#16a34a;font-weight:600">+29.98%</span> | 5,290원 (상한가)
+아리바이오의 경구용 알츠하이머 치료제 AR1001 글로벌 임상 3상 긍정적 결과 발표 및 美 FDA 허가 추진 소식 (뉴스1, 아주경제). 장중 외국인 순매수 상위 (텔레그램: AWAKE)
+
+빅웨이브로보틱스 | <span style="color:#16a34a;font-weight:600">+29.96%</span> | 17,090원 (상한가)
+엔비디아발 피지컬 AI·휴머노이드 로봇 테마 연동. 레인보우로보틱스, 에스피지 등 로봇주 동반 폭등 (와이드데일리 특징주)
+
+바이오인프라 | <span style="color:#16a34a;font-weight:600">+29.96%</span> | 1,618원 (상한가)
+개별 호재 뉴스 미확인. 공매도 금지 지정 종목(16일 적출 명단 포함, 탑스타뉴스 공매도 브리핑)으로 수급 요인 추정
+
+예선테크 | <span style="color:#16a34a;font-weight:600">+29.93%</span> | 1,424원 (상한가)
+관리종목. 개별 호재 미확인, 회전율 상위권 손바뀜 활발 (광주일보 kjdaily). 수급 요인 추정
+
+파이온엑스 | <span style="color:#16a34a;font-weight:600">+29.92%</span> | 1,359원 (상한가)
+종가급변종목 지정 (뉴스티앤티 공시 정리). 개별 호재 미확인, 수급 요인 추정
+
+썸에이지 | <span style="color:#16a34a;font-weight:600">+29.89%</span> | 1,043원 (상한가)
+주가 미달로 상장폐지 사유 발생 이력 종목 (지이뉴스). 상승 근거 뉴스 미확인, 저가주 수급 요인 추정
+
+아리바이오홀딩스 | <span style="color:#16a34a;font-weight:600">+21.68%</span> | 3,115원
+아리바이오 AR1001 임상 3상 성공 판단·상업화 추진 소식에 아리바이오랩과 동반 급등 (뉴스1, 머니투데이)
+
+아틀라스링크 | <span style="color:#16a34a;font-weight:600">+21.33%</span> | 3,555원
+직접 관련 호재 뉴스 미확인. 거래량 57,434주로 적어 수급 요인 추정
+
+다원넥스뷰 | <span style="color:#16a34a;font-weight:600">+20.59%</span> | 14,290원
+AI 반도체 후공정·레이저 장비 테마 연동. 미세공정·첨단 패키징 투자 확대 수혜 부각 (핀포인트뉴스)
+
+레인보우로보틱스 | <span style="color:#16a34a;font-weight:600">+20.06%</span> | 407,000원
+삼성전자 계열 미라콤아이앤씨와 로봇 공급·제조 사업 협력 소식 (탑스타뉴스) + 엔비디아발 로봇 테마 강세. 장중 외국인 순매수에 로보티즈 등 동반 (텔레그램: AWAKE)</div>
+            </div>
+            <div class="summary-section" id="sec-5">
+                <h2>4️⃣ 주요 하락 종목 (Worst 10)</h2>
+                <div class="ai-content">비츠로시스 | <span style="color:#dc2626;font-weight:600">-27.61%</span> | 902원
+전일 장 마감 후 3대 1 무상감자 결정 공시에 하한가권 급락 (뉴스핌, 뉴스1)
+
+동양2우B | <span style="color:#dc2626;font-weight:600">-27.35%</span> | 3,640원
+개별 뉴스 미확인. 상장주식수 약 20만주의 초저유동성 우선주로 수급 요인 추정 (광주일보 kjdaily 회전율 기사)
+
+에이엘로봇 | <span style="color:#dc2626;font-weight:600">-24.32%</span> | 13,320원
+코스닥 상장 첫날 공모가 17,600원 대비 24% 급락. 수요예측 흥행과 달리 상장 직후 매물 출회, 회전율 248% (연합인포맥스, 광주일보). 장중 외국인·기관 동반 순매도 (텔레그램: AWAKE)
+
+CG인바이츠 | <span style="color:#dc2626;font-weight:600">-22.57%</span> | 542원
+10대 1 주식병합(보통주 76,894,182주→7,689,418주) 주총소집공고 기재정정 공시 (텔레그램: 머니터링/GH DART, DART). 소수계좌 거래집중 투자주의 지정 이력 (탑스타뉴스). 병합 관련 수급 요인 추정
+
+스튜디오쏠쏠 | <span style="color:#dc2626;font-weight:600">-20.97%</span> | 2,600원
+모회사 아티스트컴퍼니의 이정재 최대주주 특혜 논란 여파로 그룹주 동반 약세 (셀럽미디어, 헤럴드경제)
+
+옵토닉스 | <span style="color:#dc2626;font-weight:600">-17.17%</span> | 15,050원
+상장 첫날(전일) 51.42% 급등 후 이틀째 차익실현 매물 출회 (광주일보 kjdaily). 수급 요인
+
+오리콤 | <span style="color:#dc2626;font-weight:600">-16.88%</span> | 4,580원
+단일계좌 대량 순매수로 금일 투자주의종목 지정 (탑스타뉴스). 전일 19% 급등 후 급반락, 수급 요인
+
+휴럼 | <span style="color:#dc2626;font-weight:600">-14.74%</span> | 1,249원
+120억원 규모 전환사채 전액 만기 전 취득·소각 결정 공시 (동아일보). 차입금 기반 CB 상환 등 자금 부담 부각 (아주경제)
+
+삼천당제약 | <span style="color:#dc2626;font-weight:600">-14.56%</span> | 137,300원
+안과 바이오시밀러 美 FDA 허가 심사에서 생산시설 보완 요구 → 허가 지연 우려 (조선비즈). 장중 기관 순매도 (텔레그램: AWAKE)
+
+오픈엣지테크놀로지 | <span style="color:#dc2626;font-weight:600">-13.65%</span> | 6,580원
+지난 13일 상한가(<span style="color:#16a34a;font-weight:600">+29.87%</span>) 등 단기 급등 후 차익실현 (뉴스투데이 N2 증시 풍향계 참고). 수급 요인 추정</div>
+            </div>
+            </div>
+            <div class="summary-section" id="sec-6">
+                <h2>5️⃣ 지수 기여도 Top 5</h2>
+                <div class="ai-content">- SK하이닉스 <span style="color:#16a34a;font-weight:600">+0.8178%</span>p (<span style="color:#16a34a;font-weight:600">+4.19%</span>): 엔비디아 호실적발 메모리 투자심리 회복 (뉴시스)
+- 삼성전자 <span style="color:#16a34a;font-weight:600">+0.6347%</span>p (<span style="color:#16a34a;font-weight:600">+2.31%</span>): 동일 반도체 훈풍. 다만 하나증권은 12일 목표가 40만원으로 하향 등 눈높이 조정 병행 (새틀경제)
+- 삼성전자우 <span style="color:#16a34a;font-weight:600">+0.1209%</span>p (<span style="color:#16a34a;font-weight:600">+3.95%</span>): 엔비디아 호실적에 삼성전자우 순매수 유입 (서울경제). 장중 외국인은 잠정 순매도 (텔레그램: AWAKE)
+- 삼성전기 <span style="color:#16a34a;font-weight:600">+0.1085%</span>p (<span style="color:#16a34a;font-weight:600">+7.43%</span>): 엔비디아와 협력 강화 소식에 7%대 상승 (연합뉴스 특징주). MLCC 저재고 유지 코멘트 (텔레그램: 돌다리 컨콜노트)
+- SK스퀘어 <span style="color:#16a34a;font-weight:600">+0.0998%</span>p (<span style="color:#16a34a;font-weight:600">+4.42%</span>): SK하이닉스 지분 가치 연동 상승. 참고로 삼성증권은 모회사 SK 목표가 950,000→650,000원 하향 (텔레그램: epic AI 리서치 요약)</div>
+            </div>
+            <div class="summary-section" id="sec-7">
+                <h2>6️⃣ 업종 &amp; 테마</h2>
+                <div class="ai-content">- 업종별 등락률 데이터 미수집으로 상승/하락 업종 순위는 금일 생략
+- 주도 테마 (텔레그램: AWAKE 마켓 브리핑)
+① 로봇: 빅웨이브로보틱스, 레인보우로보틱스, 한라캐스트, 로보티즈, 에스피지
+② 반도체/소부장: 다원넥스뷰, 코세스, 두산테스나, 와이씨, 두산
+③ 바이오/헬스케어: 삼진제약, 프로티나, 티앤엘, 메디포스트
+- 연결고리: 엔비디아 호실적 → 반도체 → 피지컬 AI/휴머노이드 로봇으로 이어지는 AI 밸류체인 연쇄 강세. 바이오는 아리바이오 임상 3상 개별 모멘텀</div>
+            </div>
+            <div class="summary-section" id="sec-8">
+                <h2>7️⃣ Key News &amp; 공시</h2>
+                <div class="ai-content">- 엔비디아 호실적에 삼성전자 2%·SK하이닉스 4% 상승 마감, 코스피 5,000선 복귀 (반도체 전반) <a href="https://n.news.naver.com/article/003/0014330694">https://n.news.naver.com/article/003/0014330694</a>
+- 골드만삭스, 코스피 목표치 &quot;12,000 간다&quot;에서 7,500으로 하향 (시장 전반) <a href="https://n.news.naver.com/article/008/0005442958">https://n.news.naver.com/article/008/0005442958</a>
+- 삼천당제약 안과 바이오시밀러 美 허가 변수, FDA 생산시설 보완 요구 (삼천당제약) <a href="https://n.news.naver.com/mnews/article/366/0001205642">https://n.news.naver.com/mnews/article/366/0001205642</a>
+- 코스닥 &quot;부실의 늪&quot; — 무너지는 기업이 살아나는 기업의 3.3배 (코스닥 중소형주) <a href="https://n.news.naver.com/article/014/0005606216">https://n.news.naver.com/article/014/0005606216</a>
+- 한은, 올해 민간소비 전망 하향 불가피 언급 (내수·소비재) <a href="https://n.news.naver.com/mnews/article/018/0006411931">https://n.news.naver.com/mnews/article/018/0006411931</a>
+- 비츠로시스 3대 1 무상감자 결정 (비츠로시스 하한가권) <a href="https://n.news.naver.com/mnews/article/421/0009295695">https://n.news.naver.com/mnews/article/421/0009295695</a>
+- 공시: 오리엔트정공 주권매매거래정지(병합·분할 전자등록 변경) <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118900298">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118900298</a> / 노브랜드 자기주식처분 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118000148">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118000148</a> / 에이치케이 자사주취득 신탁계약 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118000116">https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118000116</a> / MSDI·메를로랩·한세엠케이·인산가 유상증자 관련
+- 증권사 리포트: 로보티즈 Buy 목표가 350,000원 — 분기 적자 전환에도 성장 전망 유효 (한화투자증권) / 코리아써키트 Buy 110,000원 &quot;이제 오르막길에 장애물은 없다&quot; (메리츠증권) / 셀트리온 Buy 310,000원 (하나증권) / 케이엠더블유 Buy 70,000원 &quot;주가 움직일 때&quot; (하나증권) / SK 목표가 950,000→650,000원 하향, 매수 유지 (삼성증권)</div>
+            </div>
+            <div class="summary-section" id="sec-9">
+                <h2>8️⃣ 텔레그램 채널 핵심 인사이트</h2>
+                <div class="ai-content">- AWAKE 마켓 브리핑: 장중 외국인 잠정 순매수 아리바이오랩·안랩·JYP·로보티즈·원익홀딩스 / 순매도 이수페타시스·코리아써키트·삼성전자우·에이엘로봇. 기관 순매수 두산·원익홀딩스 / 순매도 에이엘로봇·삼성E&amp;A·삼천당제약
+- 서화백의 그림놀이: 센티먼트 &quot;관망(-20)&quot;. 거시 불확실성 속 AI·로봇·HBM 특정 섹터 강세 기대 혼재. Top 키워드 AI(18), 로봇(12), 반도체(11)
+- 도랏맨: 메모리 업황 반등의 유일한 해법은 업체들의 자발적 공급 조절이라는 시각 공유
+- 프리즘 인사이트: 장기추세 판단 &quot;강한 약세&quot; 유지. 삼성전자우 매수 보류(50일선 <span style="color:#dc2626;font-weight:600">-13.9%</span> 이격) — 금일 반등에도 추세 전환 확인 전까지 보수적 스탠스
+- 대신증권(타자/돌직구 채널): KOSPI 5,000선 회복, 다음 관문은 앤트로픽 IPO 수급
+
+※ 유의: 최근 5일 거래대금, 업종별 등락률, 투자자별 순매수 정확한 금액은 금일 데이터 미수집으로 표기 생략. 확인된 수치만 기재했습니다.</div>
+            </div>
+
+        <div class="summary-section" id="comments">
+            <h2>💬 댓글</h2>
+            <div id="cusdis_thread"
+                data-host="https://cusdis.com"
+                data-app-id="373cac9f-0992-4666-aeed-873a86399094"
+                data-page-id="20261118_all"
+                data-page-url="https://inandout-kr.github.io/market-summary/reports/20261118_all.html"
+                data-page-title="[2026.11.18] 전체 시장 마감 써머리"
+            ></div>
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        </div>
+            </main>
+            <aside class="toc-side">
+                <div class="toc-inner">
+                    <div class="toc-title">목차</div>
+                    <a href="#sec-0">1️⃣ 지수 현황</a>
+                <a href="#sec-1">2️⃣ 마켓 코멘트</a>
+                <a href="#sec-2">🏛️ 시장별 거래대금 (오늘)</a>
+                <a href="#sec-3">📅 최근 5일 거래대금</a>
+                <a href="#sec-4">3️⃣ 주요 상승 종목 (Top 10)</a>
+                <a href="#sec-5">4️⃣ 주요 하락 종목 (Worst 10)</a>
+                <a href="#sec-6">5️⃣ 지수 기여도 Top 5</a>
+                <a href="#sec-7">6️⃣ 업종 &amp; 테마</a>
+                <a href="#sec-8">7️⃣ Key News &amp; 공시</a>
+                <a href="#sec-9">8️⃣ 텔레그램 채널 핵심 인사이트</a>
+                <a href="#comments">💬 댓글</a>
+                </div>
+            </aside>
+        </div>
+
+        <a class="fab" href="#comments" aria-label="댓글로 이동">💬</a>
+
+        <footer>
+            시장 마감 써머리 봇 &middot; 생성: 2026-11-18 15:53
+        </footer>
+    </div>
+</body>
+</html>
